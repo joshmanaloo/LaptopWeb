@@ -1,0 +1,653 @@
+/*Global attributes*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
+}
+
+input [type='text'] {
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*End of global attributes*/
+
+header{
+    display:flex; /*Using Flexbox try redoing with grid*/
+    /*background: lightblue; */ /*So we can see the scope of our css*/
+    
+    width:90%;
+    margin: auto; /*Put the left and right margin into place*/
+
+    height: 10vh;
+    align-items: center; /*align items vertical wise*/
+}
+
+/*Header has 3 divs: logo-container, nav-links and cart*/
+
+.logo-container,.nav-links,.cart{
+    display: flex;
+}
+
+.logo-container{
+    /*background: lightskyblue;*/
+    flex: 1; /*Gets first in row*/
+}
+
+.logo{
+    font-weight: 400;
+    margin: 5px;
+}
+
+nav{
+    /*background: lightcoral;*/
+    flex: 2; /*Gets second in row*/
+}
+
+.nav-links{
+    justify-content: space-around;
+    list-style: none; /*Removes the bullets*/
+}
+
+.nav-link{
+    color: #5f5f79; /*One we used in figma*/
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.cart{
+    /*background: lightgreen;*/
+    flex: 1;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+/*presentation*/
+
+.presentation{
+    display: flex;
+    width:90%;
+    margin:auto;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.introduction{
+    /*background:lightblue;*/
+    flex: 1;
+}
+
+.intro-text h1 {
+    font-size: 44px;
+    font-weight: 500;
+    
+    /*How to do linear gradient!*/
+    background: linear-gradient(to right, #494964, #6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p{
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585772;
+}
+
+.cta{ /*cta = call to action OR buttons*/
+    padding: 50px 0px 0px 0px;
+    /*padding between buttons and h1*/
+}
+
+.cta-select{
+    border: 2px solid #c36cbb;
+    background: transparent;
+    color: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-add{
+    background: #c36cbb;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    border:none;
+    color: #ffffff;
+
+    /*Spacing between the 2 buttons*/
+    margin: 30px 0px 0px 30px;
+}
+
+.cover{
+    flex:1;
+}
+
+.cover img{
+    height: 60vh;
+    /*box-shadow: 3px 3px 3px; Doesnt look too nice!*/
+
+    /*How to add a drop shadow to an image*/
+    filter: drop-shadow(0px 5px 3px #000000);
+
+    /*Adding the animation*/
+    animation: drop 1.5s ease;
+}
+
+/*Circles*/
+.big-circle{
+    /*Moves to upper right corner*/
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1; /*moves it to the back*/
+    
+    opacity: 0.7; /*Make it less visible*/
+    height: 80%; /*changes the size. Recall that this is an image!*/
+}
+
+.mid-circle{
+      /*Moves to upper right corner*/
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1; /*moves it to the back*/
+    
+    opacity: 0.7; /*Make it less visible*/
+    height: 60%; /*changes the size. Recall that this is an image!*/
+}
+
+.small-circle{
+    position: absolute;
+    bottom:0%;
+    right: 52%;
+    z-index: -1;
+}
+
+.laptop-select{
+    
+    width: 15%; /*Stretch it out*/
+    display: flex;
+    justify-content: space-around;
+
+    position: absolute;
+    right: 20%;
+
+    cursor: pointer;
+}
+
+/*For specs.html*/
+.body-text{
+    /*background: lightblue;*/
+    margin-top: 25%;
+    color: #585772;
+    margin:auto;
+    align-items: center;
+    width:80%
+
+}
+
+.body-text h4{
+    /*background: lightcoral;*/
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 35px 0px 0px 10px
+
+}
+
+.body-text p {
+    /*background: lightpink;*/
+    font-size: 16px;
+    margin: 10px 0px 0px 40px;
+    
+}
+
+p.small-break { /*Small break in between the paragraphs*/
+    /*background: lightpink;*/
+    margin: 0px;
+}
+
+.body-text img{
+    margin-left: 30px;
+}
+
+/*For contacts page*/
+
+.presentation-dots{
+    display: flex;
+    width:80%;
+    margin:auto;
+    min-height: 70vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first-dot{
+    height: 409px;
+    width: 409px;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+
+    background: linear-gradient(0deg, #c36cbb, #494964);
+    -webkit-background-clip: padding-box;
+    align-items: center;
+
+
+     /*Adding the animation*/
+     animation: left 3.5s ease;
+    
+}
+
+.first-dot h2{
+    color: #ffffff;
+    font-size: 24px;
+    margin-top: 48%;
+}
+
+.second-dot img{
+    height: 409px;
+    width: 409px;
+    border-radius: 50%;
+
+
+        /*Adding the animation*/
+        animation: left 3s ease;
+    
+}
+
+.third-dot{
+    height: 409px;
+    width: 409px;
+    border-radius: 50%;
+    text-align: center;
+
+    background: linear-gradient(0deg, #494964, #c36cbb);
+    -webkit-background-clip: padding-box;
+    
+
+        /*Adding the animation*/
+        animation: left 1.5s ease;
+    
+}
+
+.third-dot h4{
+    margin-top: 12%;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.third-dot .touch{
+    margin-top:8%;
+}
+
+
+.third-dot .touch input, .touch textarea{
+    
+    margin-bottom: 20px;
+    
+    padding: 5px;
+    background-color:  #535BA1;
+
+    border:none;
+    border-radius: 20px;
+}
+
+.third-dot .touch input{
+    width:60%;
+    height: 45px;
+}
+
+.third-dot .touch textarea{
+    width:80%;
+    height: 65px;
+}
+
+/*Third dot button*/
+.third-dot .touch button{
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+    border: none;
+
+    background-color: #C36CBB;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.social-media{
+    margin: auto;
+    width:50%;
+    align-items: center;
+    text-align: center;
+}
+
+.social-media h4{
+    text-align: center;
+    margin-bottom: 1em;
+    color: #585772;
+}
+
+.social-media img{
+    height: 58px;
+    width: 58px;
+    margin: 1em 1.5em 0 1.5em ;
+}
+
+/*Targetting the area so it has white font*/
+.third-dot ::placeholder{
+    color: #ffffff;
+}
+
+textarea:focus, input:focus {
+    color: #ffffff;
+}
+
+input, select, textarea{
+    color: #ffffff;
+}
+
+footer{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 13px;
+    color: #585772;
+}
+
+
+
+
+@keyframes drop { /*What is this?!!*/
+    0%{
+        opacity: 0%;
+        transform: translateY(-80px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+/*Need css grid knowledge for overlapping!*/
+
+@keyframes left {
+    0%{
+        opacity: 0%;
+        transform: translateX(-80px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+
+@media screen and (max-width: 1520px){
+
+
+.first-dot{
+    text-align: center;
+    height: 280px;
+    width: 280px;    
+    animation: left 4.5s ease;
+}
+
+.first-dot h2{
+    font-size: 14px;
+}
+
+.second-dot img{
+    height: 280px;
+    width: 280px;    
+    animation: left 3s ease;
+}
+
+.third-dot{
+    height: 280px;
+    width: 280px;   
+    animation: left 1.5s ease; 
+}
+
+.third-dot h4{
+    margin-top: 12%;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.third-dot .touch{
+    margin-top:8%;
+}
+
+
+.third-dot .touch input, .touch textarea{
+    
+    margin-bottom: 10px;
+    
+    padding: 5px;
+    background-color:  #535BA1;
+
+    border:none;
+    border-radius: 20px;
+}
+
+.third-dot .touch input{
+    width:60%;
+    height: 20px;
+}
+
+.third-dot .touch textarea{
+    width:80%;
+    height: 65px;
+}
+
+/*Third dot button*/
+.third-dot .touch button{
+    width: 45px;
+    height: 45px;
+
+    font-size: 14px;
+}
+    
+}
+
+/*Media Queries*/
+@media screen and (max-width: 1024px){
+    /*body{
+        display: none; TEST
+    } */
+
+
+    .logo{
+        /*Remove logo name*/
+        display:none;
+    }
+
+    .nav-link, .cart img{
+        margin: 10px 10px 5px 10px;
+    }
+
+    .presentation{ /*Moves it one below each other*/
+        flex-direction: column;
+    }
+
+    .presentation-dots{
+        flex-direction: column;
+    }
+
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .intro-text h1{
+        font-size: 30px;
+    }
+
+    .intro-text p{
+        font-size: 18px;
+    }
+
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+
+    /*Can possibly add a burger menu style in the nav bar*/
+
+    .laptop-select{
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+
+    .cover img{
+        height: 50vh;
+    }
+
+    .small-circle, .mid-circle, .big-circle{
+        opacity: 0.4;
+    }
+
+    /*For specs html*/
+    .body-text img{
+        display: block;
+        max-width:330px;
+        max-height:200px;
+        width: auto;
+        height: auto;
+    }
+
+    .body-text p {
+        /*background: lightpink;*/
+        
+        margin: 10px 0px 0px 10px;
+        
+    }
+    
+    .body-text h4{
+        /*background: lightcoral;*/
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 35px 0px 0px 10px
+
+}
+
+.first-dot{
+    animation: drop 4.5s ease;
+}
+
+
+.second-dot img{
+  
+    animation: drop 3s ease;
+}
+
+.third-dot{
+ 
+    animation: drop 1.5s ease; 
+}
+
+    .social-media{
+        margin-top: 5%;
+        width: 80%;
+}
+    .social-media img{
+        height: 45px;
+        width: 45px;
+        margin: 1em;
+    }
+
+}
+
+@media screen and (max-width:375px){
+
+
+    .nav-link{
+      font-size: 14px;
+    }
+  
+    .intro-text h1{
+        font-size: 30px;
+    }
+
+    .intro-text p{
+        font-size: 15px;
+    }
+
+
+    .cta-select{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .cta-add{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        margin: 30px 0px 0px 10px;
+    }
+
+    .laptop-select{
+        bottom: 3%;
+        right: 50%;
+        width: 50%;
+        
+    }
+
+    /*
+    .cover img{
+        height: ;
+    }*/
+
+
+    /*For specs html*/
+    .body-text img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .body-text p {
+        /*background: lightpink;*/
+        
+        margin: 10px 0px 0px 0px;
+        
+    }
+    
+    .body-text h4{
+        /*background: lightcoral;*/
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 35px 0px 0px 0px;
+
+    }
+
+    .social-media{
+        width: 90%;
+    }
+
+    .social-media img{
+        height: 35px;
+        width: 35px;
+        margin: 1em 1em 1em 1em ;
+    }
+}

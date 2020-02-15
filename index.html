@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> <!--Imported fonts at Google Fonts-->
+</head>
+
+<body>
+    <header>
+
+        <div class="logo-container">
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+            <h4 class="logo">Three Dots</h4>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="specs.html">Specs</a></li>
+                <li><a class="nav-link" href="#">Products</a></li>
+                <li><a class="nav-link" href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="cart"><img src="img/cart.svg" alt="cart"></div> <!--Cart is separated from nav-->
+        <!--Try your idea where cart is part of nav bar-->
+    
+    </header>
+
+    <!--Showcase-->
+    <main> <!--First time seeing main tag-->
+        <section class="presentation"> <!--What is the purpose of presentation?-->
+
+            <div class="introduction">
+
+                <div class="intro-text"> <!--Text-->
+                    <h1>Laptop for the future</h1>
+                    <p>The new 14 inch bezeless display offering a 4k
+                        display with touch screen
+                    </p>
+                </div>
+
+                <div class="cta"> <!--Buttons-->
+                    <button class="cta-select" onclick="location.href='specs.html'">14 Inch</button>
+                    <button class="cta-add">Add To Cart</button>
+                </div>
+
+            </div>
+
+            <div class="cover">
+                <img src="img/matebook.png" alt="matebook">
+            </div>
+
+        </section>
+
+        <div class="laptop-select">
+            <img src="img/arrow-left.svg" alt="">
+            <img src="img/dot.svg" alt="">
+            <img src="img/dot-full.svg" alt="">
+            <img src="img/dot-full.svg" alt="">
+            <img src="img/arrow-right.svg" alt="">
+        </div>
+
+        <!--Circles in the background-->
+        <img class = "big-circle" src="img/big-eclipse.svg" alt="big">
+        <img class = "mid-circle" src="img/mid-eclipse.svg" alt="mid">
+        <img class = "small-circle" src="img/small-eclipse.svg" alt="small">
+    </main>
+</body>
+</html>
